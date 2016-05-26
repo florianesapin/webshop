@@ -17,11 +17,11 @@
 
             <ui:define name="content">
                 <h1>
-                    <h:outputText value="Liste des produit disponible" />
+                    <h:outputText value="Liste des produit dans le panier" />
                 </h1>
                 <h:form id="prodListForm">
 
-                    <h:dataTable id="dtProd" var="prod" value="#{magasinBean.produits}">
+                    <h:dataTable id="dtProd" var="prod" value="#{panierBean.produits}">
                         <h:column>
                             <f:facet name="header">
                                 <h:outputText value="Nom" />
@@ -52,14 +52,12 @@
                             <f:facet name="header">
                                 <h:outputText value="Ajouter au panier" />
                             </f:facet>
-                            <h:commandLink id="cmdLnkAdd" value="Ajouter au panier" action="addProduitToPanier(prod, prodQty)"/>
+                            <h:commandLink id="cmdLnkAdd" value="Ajouter au panier" />
                         </h:column>
                     </h:dataTable>
 
 
                 </h:form>
-                
-                <h:button id="buttonPanier" value="Voir mon panier" outcome="panier"/>
 
             </ui:define>
 

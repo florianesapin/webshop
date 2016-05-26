@@ -40,6 +40,20 @@ public class Magasin {
         this.nom = nom;
     }
     
+    public void addProduit(Produit produit){
+        listProduit.add(produit);
+    }
+
+    public Set<Produit> getListProduit() {
+        return listProduit;
+    }
+
+    public void setListProduit(Set<Produit> listProduit) {
+        this.listProduit = listProduit;
+    }
+    
+    
+    
     
      
 }

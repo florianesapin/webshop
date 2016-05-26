@@ -48,6 +48,30 @@ public class Panier {
     public void updateQty(Produit produit, Integer newQty){
         listProduit.replace(produit, newQty);
     }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+
+    public Map<Produit, Integer> getListProduit() {
+        return listProduit;
+    }
+
+    public void setListProduit(Map<Produit, Integer> listProduit) {
+        this.listProduit = listProduit;
+    }
     
     
     
