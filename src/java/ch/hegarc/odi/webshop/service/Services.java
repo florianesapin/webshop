@@ -41,6 +41,8 @@ public class Services implements Serializable{
         magasin.addProduit(produi2);
         magasin.addProduit(produi3);
         magasin.addProduit(produi4);
+        
+        panier.addProduits(produi4, 2);
 
         
     }
@@ -59,4 +61,11 @@ public class Services implements Serializable{
         panier.addProduits(produit, qty);
     }
     
+    public void supprProduit(Produit produit){
+        panier.suppProduits(produit);
+    }
+    
+    public void updateQty(Produit produit, Integer qty){
+        panier.updateQty(produit, qty);
+    }
 }

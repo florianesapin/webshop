@@ -35,13 +35,11 @@ public class Panier {
         }
     }
     
-    public void suppProduits(Produit produit, Integer qty){
+    public void suppProduits(Produit produit){
         if(listProduit.containsKey(produit)){
-            if (listProduit.get(qty)> qty){
-                listProduit.replace(produit, listProduit.get(produit) - qty);
-            } else {
-                listProduit.remove(produit);
-            }
+            listProduit.remove(produit);
+        } else {
+            throw new IllegalStateException("Ce produit n'existe pas"); 
         }
     }
     

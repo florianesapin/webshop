@@ -45,14 +45,21 @@
                             <f:facet name="header">
                                 <h:outputText value="Quantité" />
                             </f:facet>
-                            <h:inputText id="prodQty" value=""/>
+                            <h:inputText id="prodQty" value="#{panierBean.getQtyproduit(prod)}"/>
                         </h:column>
 
                         <h:column>
                             <f:facet name="header">
-                                <h:outputText value="Ajouter au panier" />
+                                <h:outputText value="Supprimer" />
                             </f:facet>
-                            <h:commandLink id="cmdLnkAdd" value="Ajouter au panier" />
+                            <h:commandLink id="cmdLnkSuppr" value="Supprimer du panier" action="#{panierBean.supprProduit(prod)}"/>
+                        </h:column>
+
+                        <h:column>
+                            <f:facet name="header">
+                                <h:outputText value="Modifier" />
+                            </f:facet>
+                            <h:commandLink id="cmdLnkUpdate" value="Modifier la quantité" action="#{panierBean.updateQry(prod, ProdQty)}"/>
                         </h:column>
                     </h:dataTable>
 
